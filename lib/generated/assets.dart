@@ -23,29 +23,29 @@ class $AssetsImagesGen {
   final AssetGenImage sectionHeroVisualCard = const AssetGenImage(
     'assets/images/Section - Hero Visual Card.png',
   );
-  final AssetGenImage sleekConcentricGlassContainer = const AssetGenImage(
-    'assets/images/Sleek Concentric Glass Container.png',
-  );
   final AssetGenImage uniScheduleLogo = const AssetGenImage(
     'assets/images/UniSchedule Logo.png',
   );
   final AssetGenImage computerScience = const AssetGenImage(
     'assets/images/computer_science.png',
   );
+  final AssetGenImage sleekConcentricGlassContainer = const AssetGenImage(
+    'assets/images/Sleek Concentric Glass Container.png',
+  );
+  final AssetGenImage elipseDashed = const AssetGenImage(
+    'assets/images/elipse_dashed.png',
+  );
   final AssetGenImage elipse1 = const AssetGenImage(
     'assets/images/elipse_1.png',
+  );
+  final AssetGenImage elipseBigger = const AssetGenImage(
+    'assets/images/elipse_bigger.png',
   );
   final AssetGenImage elipse2 = const AssetGenImage(
     'assets/images/elipse_2.png',
   );
   final AssetGenImage elipse3 = const AssetGenImage(
     'assets/images/elipse_3.png',
-  );
-  final AssetGenImage elipseBigger = const AssetGenImage(
-    'assets/images/elipse_bigger.png',
-  );
-  final AssetGenImage elipseDashed = const AssetGenImage(
-    'assets/images/elipse_dashed.png',
   );
   final AssetGenImage elipseSolid = const AssetGenImage(
     'assets/images/elipse_solid.png',
@@ -74,9 +74,6 @@ class $AssetsIconsGen {
   final SvgGenImage homeIc = const SvgGenImage('assets/icons/home_ic.svg');
   final AssetGenImage laboratoryStatus = const AssetGenImage(
     'assets/icons/laboratory_status.png',
-  );
-  final SvgGenImage linearLoadingIc = const SvgGenImage(
-    'assets/icons/linear_loading_ic.svg',
   );
   final SvgGenImage notificationIc = const SvgGenImage(
     'assets/icons/notification_ic.svg',
