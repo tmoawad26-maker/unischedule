@@ -9,7 +9,7 @@ class AppTextStyles {
     fontSize: 10.sp,
     fontWeight: FontWeight.w400,
   );
-  static final TextStyle bold11Grey = GoogleFonts.plusJakartaSans(
+  static final TextStyle bold11White = GoogleFonts.plusJakartaSans(
     color: AppColors.white,
     fontSize: 11.sp,
     fontWeight: FontWeight.w700,

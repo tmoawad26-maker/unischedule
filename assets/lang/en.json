@@ -1,3 +1,10 @@
 {
- "welcome": "Welcome"
+ "academicSync": "• FALL 2024 • ACADEMIC SYNC ACTIVE",
+ "universityLife": "Your University Life, Organized.",
+ "uniSchedule": "UniSchedule",
+ "engineName": "Smart Academic Timetable Engine",
+ "version": "v2.4.1",
+ "faculty_title": "Faculty of Computer Science & AI",
+ "powered_by_brand": "Powered by AcademicNexus",
+ "resolving_prerequisites": "Resolving course prerequisite overlap..."
 }
