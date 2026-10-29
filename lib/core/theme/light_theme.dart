@@ -28,7 +28,7 @@ class LightTheme {
     bodySmall: AppTextStyles.regular12BlackLight,
     labelLarge: AppTextStyles.regular14Black,
     labelMedium: AppTextStyles.regular10textGreen,
-    labelSmall: AppTextStyles.bold11Grey.copyWith(
+    labelSmall: AppTextStyles.bold11White.copyWith(
       color: AppColors.lightBlack,
     ),
   );

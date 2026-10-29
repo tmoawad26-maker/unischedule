@@ -16,5 +16,10 @@ class AppColors {
   static const textColor = Color(0xffBA1A1A);
   static const grey = Color(0xff73777F);
   static const secondary = Color(0xff111C2D);
-
+  static const splashBackgroundColor1 = Color(0xff0C1E34);
+  static const splashBackgroundColor2 = Color(0xff102742);
+  static const splashBackgroundColor3 = Color(0xff173B63);
+  static const splashHeaderColor = Color(0xff371763);
+  static const splashLogoContainer = Color(0xff28405a);
+  static const brandingColor = Color(0xffA8C8F8);
 }
