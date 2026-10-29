@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:unischedule/core/utils/app_text_styles.dart';
+import 'package:unischedule/core/utils/assets.dart';
 
 import '../../../../../core/utils/app_colors.dart';
 
@@ -29,48 +30,32 @@ class SplashLogoWidget extends StatelessWidget {
                   ),
                 ],
               ),
-              child: Image.asset(
-                'assets/images/Sleek Concentric Glass Container.png',
-              ),
+              child: Image.asset(Assets.imagesSleekConcentricGlassContainer),
             ),
           ),
         ),
         Positioned(
           top: 105,
           right: 75,
-          child: Image.asset('assets/images/elipse_dashed.png'),
+          child: Image.asset(Assets.imagesElipseDashed),
         ),
         Positioned(
           top: 45,
           right: 20,
           child: Align(
             alignment: Alignment.center,
-            child: Image.asset('assets/images/elipse_1.png'),
-          ),
-        ),
-        Positioned(
-          top: 20,
-          right: 20,
-          child: Image.asset(
-            'assets/images/elipse_3.png',
-            fit: BoxFit.cover,
+            child: Image.asset(Assets.imagesElipse1),
           ),
         ),
         Positioned(
           top: 20,
           child: Align(
             alignment: .center,
-            child: Image.asset(
-              'assets/images/elipse_bigger.png',
-
-            ),
+            child: Image.asset(Assets.imagesElipseBigger),
           ),
         ),
         Positioned(
-          child: Image.asset(
-            'assets/images/elipse_solid.png',
-            fit: BoxFit.cover,
-          ),
+          child: Image.asset(Assets.imagesElipseSolid, fit: BoxFit.cover),
         ),
         Positioned(
           bottom: 77,
