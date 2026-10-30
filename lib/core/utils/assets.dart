@@ -33,6 +33,10 @@ class Assets {
   /// Assets for iconsNotificationIc
   /// assets/icons/notification_ic.svg
   static const String iconsNotificationIc = "assets/icons/notification_ic.svg";
+  static const iconsCheck = "assets/icons/check_ic.png";
+  static const iconsComputer = "assets/icons/computer_ic.png";
+  static const iconsCustomerClustering = "assets/icons/customer_clustering.png";
+  static const iconsLiveTerminal = "assets/icons/live_terminal.png";
 
   /// Assets for iconsProfileHeaderIc
   /// assets/icons/profile_header_ic.png
