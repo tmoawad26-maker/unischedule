@@ -121,3 +121,4 @@ class _CustomOnBoardingBodyState extends State<CustomOnBoardingBody> {
     context.go(Routes.home);
   }
 }
+

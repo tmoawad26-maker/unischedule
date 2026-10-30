@@ -23,17 +23,23 @@ class $AssetsImagesGen {
   final AssetGenImage sectionHeroVisualCard = const AssetGenImage(
     'assets/images/Section - Hero Visual Card.png',
   );
-  final AssetGenImage sleekConcentricGlassContainer = const AssetGenImage(
-    'assets/images/Sleek Concentric Glass Container.png',
-  );
   final AssetGenImage uniScheduleLogo = const AssetGenImage(
     'assets/images/UniSchedule Logo.png',
   );
   final AssetGenImage computerScience = const AssetGenImage(
     'assets/images/computer_science.png',
   );
+  final AssetGenImage sleekConcentricGlassContainer = const AssetGenImage(
+    'assets/images/Sleek Concentric Glass Container.png',
+  );
+  final AssetGenImage elipseDashed = const AssetGenImage(
+    'assets/images/elipse_dashed.png',
+  );
   final AssetGenImage elipse1 = const AssetGenImage(
     'assets/images/elipse_1.png',
+  );
+  final AssetGenImage elipseBigger = const AssetGenImage(
+    'assets/images/elipse_bigger.png',
   );
   final AssetGenImage elipse2 = const AssetGenImage(
     'assets/images/elipse_2.png',
@@ -41,18 +47,14 @@ class $AssetsImagesGen {
   final AssetGenImage elipse3 = const AssetGenImage(
     'assets/images/elipse_3.png',
   );
-  final AssetGenImage elipseBigger = const AssetGenImage(
-    'assets/images/elipse_bigger.png',
-  );
-  final AssetGenImage elipseDashed = const AssetGenImage(
-    'assets/images/elipse_dashed.png',
-  );
   final AssetGenImage elipseSolid = const AssetGenImage(
     'assets/images/elipse_solid.png',
   );
   final AssetGenImage handImg = const AssetGenImage(
     'assets/images/hand_img.png',
   );
+
+
   final AssetGenImage labouratoryImg = const AssetGenImage(
     'assets/images/labouratory_img.png',
   );
@@ -60,18 +62,15 @@ class $AssetsImagesGen {
 
 class $AssetsIconsGen {
   const $AssetsIconsGen();
-
   final AssetGenImage checkIc = const AssetGenImage(
     'assets/icons/check_ic.png',
   );
   final AssetGenImage computerIc = const AssetGenImage(
     'assets/icons/computer_ic.png',
   );
+
   final SvgGenImage coursesIc = const SvgGenImage(
     'assets/icons/courses_ic.svg',
-  );
-  final AssetGenImage customerClustering = const AssetGenImage(
-    'assets/icons/customer_clustering.png',
   );
   final AssetGenImage dayIc = const AssetGenImage('assets/icons/day_ic.png');
   final AssetGenImage enrolledCourses = const AssetGenImage(
@@ -80,21 +79,24 @@ class $AssetsIconsGen {
   final AssetGenImage facultyCsAiIc = const AssetGenImage(
     'assets/icons/faculty_cs_ai_ic.png',
   );
+  final AssetGenImage customerClustering = const AssetGenImage(
+    'assets/icons/customer_clustering.png',
+  );
   final SvgGenImage homeIc = const SvgGenImage('assets/icons/home_ic.svg');
   final AssetGenImage laboratoryStatus = const AssetGenImage(
     'assets/icons/laboratory_status.png',
-  );
-  final SvgGenImage linearLoadingIc = const SvgGenImage(
-    'assets/icons/linear_loading_ic.svg',
-  );
-  final AssetGenImage liveTerminal = const AssetGenImage(
-    'assets/icons/live_terminal.png',
   );
   final SvgGenImage notificationIc = const SvgGenImage(
     'assets/icons/notification_ic.svg',
   );
   final AssetGenImage profileHeaderIc = const AssetGenImage(
     'assets/icons/profile_header_ic.png',
+  );
+  final SvgGenImage linearLoadingIc = const SvgGenImage(
+    'assets/icons/linear_loading_ic.svg',
+  );
+  final AssetGenImage liveTerminal = const AssetGenImage(
+    'assets/icons/live_terminal.png',
   );
   final SvgGenImage profileIc = const SvgGenImage(
     'assets/icons/profile_ic.svg',
