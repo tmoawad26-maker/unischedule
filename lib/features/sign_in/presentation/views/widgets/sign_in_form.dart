@@ -136,7 +136,7 @@ class _SignInFormState extends State<SignInForm> {
 
   void _submit() {
     if (_formKey.currentState?.validate() ?? false) {
-      widget.onValidSubmit();
+      context.go(Routes.mainLayout);
     }
   }
 }
