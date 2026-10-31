@@ -30,12 +30,12 @@ class OnBoardingPageView extends StatelessWidget {
               duration: const Duration(milliseconds: 300),
               curve: Curves.easeOut,
             ),
-            onSkip: () => navigateToHome(context)
+            onSkip: () => navigateToSignIn(context),
           );
         },
 
     );
   }
 
-  void navigateToHome(BuildContext context) => context.go(Routes.home);
+  void navigateToSignIn(BuildContext context) => context.go(Routes.signIn);
 }

@@ -68,7 +68,7 @@ class _CustomOnBoardingBodyState extends State<CustomOnBoardingBody> {
                     curve: Curves.easeIn,
                   );
                 } else {
-                  navigateToHome(context);
+                  navigateToSignIn(context);
                 }
               },
             ),
@@ -117,8 +117,7 @@ class _CustomOnBoardingBodyState extends State<CustomOnBoardingBody> {
     );
   }
 
-  void navigateToHome(BuildContext context) {
-    context.go(Routes.home);
+  void navigateToSignIn(BuildContext context) {
+    context.go(Routes.signIn);
   }
 }
-
