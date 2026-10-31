@@ -83,6 +83,22 @@
  "back_to_sign_in": "Back to Sign In",
  "reset_help_title": "Having trouble?",
  "reset_help_description": "Visit Student Affairs Building B, Room 104 for physical identity validation, or contact the university administration support team.",
- "reset_help_contact": "helpdesk@university.edu"
+ "reset_help_contact": "helpdesk@university.edu",
+ "main_tab_home": "Home",
+ "main_tab_schedule": "Schedule",
+ "main_tab_courses": "Courses",
+ "main_tab_notifications": "Notifications",
+ "main_tab_profile": "Profile",
+ "main_notification_count": "3",
+ "main_home_title": "Welcome to UniSchedule",
+ "main_home_description": "Your academic schedule and campus updates in one place.",
+ "main_schedule_title": "Your Schedule",
+ "main_schedule_description": "Your classes, rooms, and upcoming sessions.",
+ "main_courses_title": "Your Courses",
+ "main_courses_description": "Your enrolled courses will appear here.",
+ "main_notifications_title": "Notifications",
+ "main_notifications_description": "Your university updates will appear here.",
+ "main_profile_title": "Your Profile",
+ "main_profile_description": "Your student profile will appear here."
 
 }
