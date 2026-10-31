@@ -5,11 +5,14 @@ import 'package:unischedule/unishedule_app.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
+
   runApp(
     EasyLocalization(
-      supportedLocales: [Locale('en'),Locale('ar')],
+      supportedLocales: [Locale('en'), Locale('ar')],
       path: 'assets/lang',
       fallbackLocale: Locale('ar'),
-    child: const UnischeduleApp()
-    ));
+      startLocale: Locale('ar'),
+      child: const UnischeduleApp(),
+    ),
+  );
 }

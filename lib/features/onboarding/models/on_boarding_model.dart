@@ -1,10 +1,6 @@
-import 'package:easy_localization/easy_localization.dart';
-
 import '../../../core/utils/assets.dart';
 import 'on_boarding_card_model.dart';
 
-/// Text fields contain Easy Localization keys so the active locale is resolved
-/// when the onboarding page is built.
 class OnBoardingModel {
   const OnBoardingModel({
     required this.imagePath,
@@ -20,24 +16,24 @@ class OnBoardingModel {
   final String subTitle;
   final List<OnBoardingCardModel> cards;
 
-  static final List<OnBoardingModel> pages = [
+  static const List<OnBoardingModel> pages = [
     OnBoardingModel(
       imagePath: Assets.imagesHeroGraphicSection,
-      stepHeader: 'step_header'.tr(),
-      title: 'feature_title'.tr(),
-      subTitle: 'feature_subtitle'.tr(),
+      stepHeader: 'step_header',
+      title: 'feature_title',
+      subTitle: 'feature_subtitle',
       cards: [
         OnBoardingCardModel(
           iconPath: Assets.iconsCustomerClustering,
-          title: 'feature_tag'.tr(),
-          badgeText: 'days_per_week'.tr(),
-          subTitle: 'description'.tr(),
+          title: 'feature_tag',
+          badgeText: 'days_per_week',
+          subTitle: 'description',
         ),
         OnBoardingCardModel(
           iconPath: Assets.iconsCheck,
-          title: 'guarantee_card_title'.tr(),
+          title: 'guarantee_card_title',
           badgeText: 'badge',
-          subTitle: 'guarantee_card_subtitle'.tr(),
+          subTitle: 'guarantee_card_subtitle',
         ),
       ],
     ),
@@ -49,34 +45,34 @@ class OnBoardingModel {
       cards: [
         OnBoardingCardModel(
           iconPath: Assets.iconsLiveTerminal,
-          title: 'card_1_title'.tr(),
-          badgeText: 'card_1_badge'.tr(),
+          title: 'card_1_title',
+          badgeText: 'card_1_badge',
           subTitle: 'card_1_subtitle',
         ),
         OnBoardingCardModel(
           iconPath: Assets.iconsComputer,
-          title: 'card_2_title'.tr(),
-          badgeText: 'card_2_badge'.tr(),
-          subTitle: 'card_2_subtitle'.tr(),
+          title: 'card_2_title',
+          badgeText: 'card_2_badge',
+          subTitle: 'card_2_subtitle',
         ),
       ],
     ),
     OnBoardingModel(
       imagePath: Assets.imagesSectionHeroVisualCard,
-      stepHeader: 'page_3_step_header'.tr(),
-      title: 'page_3_title'.tr(),
-      subTitle: 'page_3_subtitle'.tr(),
+      stepHeader: 'page_3_step_header',
+      title: 'page_3_title',
+      subTitle: 'page_3_subtitle',
       cards: [
         OnBoardingCardModel(
           iconPath: Assets.iconsDayIc,
-          title: 'page_3_card_1_title'.tr(),
-          badgeText: 'page_3_card_1_badge'.tr(),
-          subTitle: 'page_3_card_1_subtitle'.tr(),
+          title: 'page_3_card_1_title',
+          badgeText: 'page_3_card_1_badge',
+          subTitle: 'page_3_card_1_subtitle',
         ),
         OnBoardingCardModel(
           iconPath: Assets.iconsCheck,
-          title: 'page_3_card_2_title'.tr(),
-          subTitle: 'page_3_card_2_subtitle'.tr(),
+          title: 'page_3_card_2_title',
+          subTitle: 'page_3_card_2_subtitle',
         ),
       ],
     ),
