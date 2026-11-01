@@ -53,6 +53,8 @@ class $AssetsImagesGen {
   final AssetGenImage handImg = const AssetGenImage(
     'assets/images/hand_img.png',
   );
+
+
   final AssetGenImage labouratoryImg = const AssetGenImage(
     'assets/images/labouratory_img.png',
   );
@@ -60,6 +62,12 @@ class $AssetsImagesGen {
 
 class $AssetsIconsGen {
   const $AssetsIconsGen();
+  final AssetGenImage checkIc = const AssetGenImage(
+    'assets/icons/check_ic.png',
+  );
+  final AssetGenImage computerIc = const AssetGenImage(
+    'assets/icons/computer_ic.png',
+  );
 
   final SvgGenImage coursesIc = const SvgGenImage(
     'assets/icons/courses_ic.svg',
@@ -71,6 +79,9 @@ class $AssetsIconsGen {
   final AssetGenImage facultyCsAiIc = const AssetGenImage(
     'assets/icons/faculty_cs_ai_ic.png',
   );
+  final AssetGenImage customerClustering = const AssetGenImage(
+    'assets/icons/customer_clustering.png',
+  );
   final SvgGenImage homeIc = const SvgGenImage('assets/icons/home_ic.svg');
   final AssetGenImage laboratoryStatus = const AssetGenImage(
     'assets/icons/laboratory_status.png',
@@ -80,6 +91,12 @@ class $AssetsIconsGen {
   );
   final AssetGenImage profileHeaderIc = const AssetGenImage(
     'assets/icons/profile_header_ic.png',
+  );
+  final SvgGenImage linearLoadingIc = const SvgGenImage(
+    'assets/icons/linear_loading_ic.svg',
+  );
+  final AssetGenImage liveTerminal = const AssetGenImage(
+    'assets/icons/live_terminal.png',
   );
   final SvgGenImage profileIc = const SvgGenImage(
     'assets/icons/profile_ic.svg',

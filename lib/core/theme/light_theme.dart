@@ -6,9 +6,7 @@ class LightTheme {
   const LightTheme._();
 
   static final TextTheme _textTheme = TextTheme(
-    displayLarge: AppTextStyles.bold30White.copyWith(
-      color: AppColors.primary,
-    ),
+    displayLarge: AppTextStyles.bold30White.copyWith(color: AppColors.primary),
     displayMedium: AppTextStyles.bold30White.copyWith(
       color: AppColors.secondary,
     ),
@@ -28,27 +26,26 @@ class LightTheme {
     bodySmall: AppTextStyles.regular12BlackLight,
     labelLarge: AppTextStyles.regular14Black,
     labelMedium: AppTextStyles.regular10textGreen,
-    labelSmall: AppTextStyles.bold11White.copyWith(
-      color: AppColors.lightBlack,
-    ),
+    labelSmall: AppTextStyles.bold11White.copyWith(color: AppColors.lightBlack),
   );
 
   static final ThemeData themeData = ThemeData(
     useMaterial3: true,
     brightness: Brightness.light,
-    colorScheme: ColorScheme.fromSeed(
-      seedColor: AppColors.primary,
-      brightness: Brightness.light,
-    ).copyWith(
-      primary: AppColors.primary,
-      onPrimary: AppColors.white,
-      secondary: AppColors.green,
-      onSecondary: AppColors.white,
-      surface: AppColors.scaffoldBackgroundColor,
-      onSurface: AppColors.secondary,
-      error: AppColors.red,
-      onError: AppColors.white,
-    ),
+    colorScheme:
+        ColorScheme.fromSeed(
+          seedColor: AppColors.primary,
+          brightness: Brightness.light,
+        ).copyWith(
+          primary: AppColors.primary,
+          onPrimary: AppColors.white,
+          secondary: AppColors.green,
+          onSecondary: AppColors.white,
+          surface: AppColors.scaffoldBackgroundColor,
+          onSurface: AppColors.secondary,
+          error: AppColors.red,
+          onError: AppColors.white,
+        ),
     scaffoldBackgroundColor: AppColors.scaffoldBackgroundColor,
     appBarTheme: const AppBarTheme(
       backgroundColor: AppColors.appBarColor,
@@ -56,6 +53,25 @@ class LightTheme {
       surfaceTintColor: Colors.transparent,
       elevation: 0,
       centerTitle: false,
+    ),
+    navigationBarTheme: NavigationBarThemeData(
+      height: 72,
+      backgroundColor: AppColors.white,
+      indicatorColor: AppColors.white,
+      elevation: 0,
+      labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
+      labelTextStyle: WidgetStateProperty.resolveWith((states) {
+        final color = states.contains(WidgetState.selected)
+            ? AppColors.primary
+            : AppColors.lightBlack;
+        return AppTextStyles.regular12BlackLight.copyWith(color: color);
+      }),
+      iconTheme: WidgetStateProperty.resolveWith((states) {
+        final color = states.contains(WidgetState.selected)
+            ? AppColors.primary
+            : AppColors.lightBlack;
+        return IconThemeData(color: color, size: 23);
+      }),
     ),
     textTheme: _textTheme,
   );

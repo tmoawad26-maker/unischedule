@@ -13,7 +13,7 @@ class AppColors {
   static const surfaceLightBlue = Color(0xffE8EEFF);
   static const lightRed = Color(0xffFFDAD6);
   static const red = Color(0xff93000A);
-  static const textColor = Color(0xffBA1A1A);
+  static const textColorRed = Color(0xffBA1A1A);
   static const grey = Color(0xff73777F);
   static const secondary = Color(0xff111C2D);
   static const splashBackgroundColor1 = Color(0xff0C1E34);
@@ -22,4 +22,6 @@ class AppColors {
   static const splashHeaderColor = Color(0xff371763);
   static const splashLogoContainer = Color(0xff28405a);
   static const brandingColor = Color(0xffA8C8F8);
+  static const scheduleColor = Color(0xff002548);
+  static const scheduleLightGreen = Color(0xffE4FAF7);
 }

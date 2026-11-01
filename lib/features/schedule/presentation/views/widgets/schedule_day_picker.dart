@@ -26,7 +26,7 @@ class ScheduleDayPicker extends StatelessWidget {
       itemBuilder: (context, index) {
         final day = _days[index];
         final selected = index == selectedIndex;
-        final background = index == 3 ? AppColors.lightGreen : AppColors.white;
+        final background = index == 3 ? AppColors.scheduleLightGreen : AppColors.white;
         final foreground = selected ? Colors.white : AppColors.primary;
         return InkWell(
           borderRadius: BorderRadius.circular(13),

@@ -5,4 +5,5 @@ class Routes {
   static const forgetPassword = '/forgetpassword-screen';
   static const home = '/home';
   static const schedule = '/schedule';
+  static const mainLayout = '/mainlayout';
 }
