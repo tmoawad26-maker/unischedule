@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:unischedule/features/home/presentation/views/screens/home_screen.dart';
 import 'package:unischedule/features/main/models/main_tab_model.dart';
 import 'package:unischedule/features/main/presentation/views/widgets/main_tab_screen.dart';
 
@@ -22,6 +23,14 @@ class _MainLayoutScreenState extends State<MainLayoutScreen> {
   }
 
   @override
+  void didUpdateWidget(covariant MainLayoutScreen oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (widget.initialIndex != oldWidget.initialIndex) {
+      _selectedIndex = widget.initialIndex.clamp(0, mainTabs.length - 1);
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
@@ -30,15 +39,15 @@ class _MainLayoutScreenState extends State<MainLayoutScreen> {
           index: _selectedIndex,
           children: [
             for (final tab in mainTabs)
-              MainTabScreen(model: tab),
+              tab.labelKey == 'main_tab_home'
+                  ? const HomeScreen()
+                  : MainTabScreen(model: tab),
           ],
         ),
       ),
       bottomNavigationBar: NavigationBar(
         selectedIndex: _selectedIndex,
-        onDestinationSelected: (index) {
-          setState(() => _selectedIndex = index);
-        },
+        onDestinationSelected: _selectTab,
         destinations: [
           for (final tab in mainTabs)
             NavigationDestination(
@@ -53,6 +62,11 @@ class _MainLayoutScreenState extends State<MainLayoutScreen> {
         ],
       ),
     );
+  }
+
+  void _selectTab(int index) {
+    if (index == _selectedIndex) return;
+    setState(() => _selectedIndex = index);
   }
 
   Widget _buildTabIcon(BuildContext context, IconData icon, bool showBadge) {
