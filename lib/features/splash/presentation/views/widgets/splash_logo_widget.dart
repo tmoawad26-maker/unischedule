@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:unischedule/core/utils/app_text_styles.dart';
+import 'package:unischedule/core/utils/assets.dart';
 
 import '../../../../../core/utils/app_colors.dart';
 
@@ -12,11 +13,13 @@ class SplashLogoWidget extends StatelessWidget {
     return Stack(
       children: [
         Positioned(
-          top: 120,
-          right: 66,
-          child: Align(
+          top: 45,
+          right: 20,
+          child: Stack(
             alignment: Alignment.center,
-            child: Container(
+            children: [
+              Image.asset(Assets.imagesElipse1),
+              Container(
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
@@ -29,48 +32,76 @@ class SplashLogoWidget extends StatelessWidget {
                   ),
                 ],
               ),
-              child: Image.asset(
-                'assets/images/Sleek Concentric Glass Container.png',
+              child: Container(
+                        width: 112,
+                        height: 112,
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 8,
+                          vertical: 10,
+                        ),
+                        decoration: BoxDecoration(
+                          color: AppColors.green,
+                          borderRadius: BorderRadius.circular(28),
+                          border: Border.all(
+                            color: AppColors.lightBlue.withValues(alpha: 0.65),
+                          ),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: AppColors.lightGreen,
+                              blurRadius: 120,
+                              offset: Offset(0, 0),
+                              spreadRadius: 0.0,
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Icon(
+                              Icons.calendar_month_rounded,
+                              color: AppColors.lightGreen,
+                              size: 23,
+                            ),
+                            const SizedBox(height: 5),
+                            Text(
+                              'splash_square_title'.tr(),
+                              textAlign: TextAlign.center,
+                              style: AppTextStyles.bold11White.copyWith(
+                                fontSize: 11,
+                                height: 1.15,
+                              ),
+                            ),
+                            const SizedBox(height: 3),
+                            Text(
+                              'splash_square_subtitle'.tr(),
+                              textAlign: TextAlign.center,
+                              style: AppTextStyles.bold11White.copyWith(
+                                color: AppColors.lightBlue,
+                                fontSize: 8,
+                                height: 1.1,
+                              ),
+                            ),
+                          ],
+                        ),
+                    ),
               ),
-            ),
+            ],
           ),
         ),
         Positioned(
           top: 105,
           right: 75,
-          child: Image.asset('assets/images/elipse_dashed.png'),
+          child: Image.asset(Assets.imagesElipseDashed),
         ),
         Positioned(
-          top: 45,
-          right: 20,
+          top: 20,
           child: Align(
             alignment: Alignment.center,
-            child: Image.asset('assets/images/elipse_1.png'),
+            child: Image.asset(Assets.imagesElipseBigger),
           ),
         ),
         Positioned(
-          top: 20,
-          right: 20,
-          child: Image.asset(
-            'assets/images/elipse_3.png',
-            fit: BoxFit.cover,
-          ),
-        ),
-        Positioned(
-          top: 20,
-          child: Align(
-            alignment: .center,
-            child: Image.asset(
-              'assets/images/elipse_bigger.png',
-
-            ),
-          ),
-        ),
-        Positioned(
-          child: Image.asset(
-            'assets/images/elipse_solid.png',
-            fit: BoxFit.cover,
-          ),
+          child: Image.asset(Assets.imagesElipseSolid, fit: BoxFit.cover),
         ),
         Positioned(
           bottom: 77,

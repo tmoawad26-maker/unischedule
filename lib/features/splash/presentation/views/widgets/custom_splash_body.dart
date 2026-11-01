@@ -87,7 +87,7 @@ class _CustomSplashBodyState extends State<CustomSplashBody>
           children: [
             SizedBox(height: 32),
             SplashHeader(theme: theme),
-            SplashLogoWidget(),
+            Expanded(child: Center(child: SplashLogoWidget())),
             BrandingWidget(animationController: _animationController,
                 percentageValue: percentageValue,
                 progressAnimation: _progressAnimation, theme: theme)
