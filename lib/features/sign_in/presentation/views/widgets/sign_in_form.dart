@@ -50,7 +50,7 @@ class _SignInFormState extends State<SignInForm> {
                 label: 'university_id_label'.tr(),
                 hintText: 'university_id_hint'.tr(),
                 prefixIcon: Icons.badge_outlined,
-                keyboardType: TextInputType.text,
+                keyboardType: TextInputType.number,
                 textInputAction: TextInputAction.next,
                 validator: (value) =>
                     LoginValidator.validateUniversityId(value)?.tr(),
@@ -66,6 +66,7 @@ class _SignInFormState extends State<SignInForm> {
                 label: 'password_label'.tr(),
                 hintText: 'password_hint'.tr(),
                 prefixIcon: Icons.lock_outline,
+                keyboardType: TextInputType.number,
                 obscureText: _obscurePassword,
                 textInputAction: TextInputAction.done,
                 onFieldSubmitted: (_) => _submit(),
@@ -136,7 +137,7 @@ class _SignInFormState extends State<SignInForm> {
 
   void _submit() {
     if (_formKey.currentState?.validate() ?? false) {
-      widget.onValidSubmit();
+      context.go(Routes.home);
     }
   }
 }
