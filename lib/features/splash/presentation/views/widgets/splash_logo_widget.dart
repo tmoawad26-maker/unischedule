@@ -13,11 +13,13 @@ class SplashLogoWidget extends StatelessWidget {
     return Stack(
       children: [
         Positioned(
-          top: 120,
-          right: 66,
-          child: Align(
+          top: 45,
+          right: 20,
+          child: Stack(
             alignment: Alignment.center,
-            child: Container(
+            children: [
+              Image.asset(Assets.imagesElipse1),
+              Container(
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
@@ -30,8 +32,60 @@ class SplashLogoWidget extends StatelessWidget {
                   ),
                 ],
               ),
-              child: Image.asset(Assets.imagesSleekConcentricGlassContainer),
-            ),
+              child: Container(
+                        width: 112,
+                        height: 112,
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 8,
+                          vertical: 10,
+                        ),
+                        decoration: BoxDecoration(
+                          color: AppColors.green,
+                          borderRadius: BorderRadius.circular(28),
+                          border: Border.all(
+                            color: AppColors.lightBlue.withValues(alpha: 0.65),
+                          ),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: AppColors.lightGreen,
+                              blurRadius: 120,
+                              offset: Offset(0, 0),
+                              spreadRadius: 0.0,
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Icon(
+                              Icons.calendar_month_rounded,
+                              color: AppColors.lightGreen,
+                              size: 23,
+                            ),
+                            const SizedBox(height: 5),
+                            Text(
+                              'splash_square_title'.tr(),
+                              textAlign: TextAlign.center,
+                              style: AppTextStyles.bold11White.copyWith(
+                                fontSize: 11,
+                                height: 1.15,
+                              ),
+                            ),
+                            const SizedBox(height: 3),
+                            Text(
+                              'splash_square_subtitle'.tr(),
+                              textAlign: TextAlign.center,
+                              style: AppTextStyles.bold11White.copyWith(
+                                color: AppColors.lightBlue,
+                                fontSize: 8,
+                                height: 1.1,
+                              ),
+                            ),
+                          ],
+                        ),
+                    ),
+              ),
+            ],
           ),
         ),
         Positioned(
@@ -40,17 +94,9 @@ class SplashLogoWidget extends StatelessWidget {
           child: Image.asset(Assets.imagesElipseDashed),
         ),
         Positioned(
-          top: 45,
-          right: 20,
-          child: Align(
-            alignment: Alignment.center,
-            child: Image.asset(Assets.imagesElipse1),
-          ),
-        ),
-        Positioned(
           top: 20,
           child: Align(
-            alignment: .center,
+            alignment: Alignment.center,
             child: Image.asset(Assets.imagesElipseBigger),
           ),
         ),
