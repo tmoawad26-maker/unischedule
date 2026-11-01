@@ -137,7 +137,7 @@ class _SignInFormState extends State<SignInForm> {
 
   void _submit() {
     if (_formKey.currentState?.validate() ?? false) {
-      context.go(Routes.home);
+      context.go(Routes.mainLayout);
     }
   }
 }

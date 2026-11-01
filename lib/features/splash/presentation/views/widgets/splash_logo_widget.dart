@@ -62,24 +62,13 @@ class SplashLogoWidget extends StatelessWidget {
                               color: AppColors.lightGreen,
                               size: 23,
                             ),
-                            const SizedBox(height: 5),
-                            Text(
-                              'splash_square_title'.tr(),
-                              textAlign: TextAlign.center,
-                              style: AppTextStyles.bold11White.copyWith(
-                                fontSize: 11,
-                                height: 1.15,
-                              ),
-                            ),
                             const SizedBox(height: 3),
                             Text(
-                              'splash_square_subtitle'.tr(),
+                            'splash_description'.tr(),
                               textAlign: TextAlign.center,
-                              style: AppTextStyles.bold11White.copyWith(
-                                color: AppColors.lightBlue,
-                                fontSize: 8,
-                                height: 1.1,
-                              ),
+                              style: AppTextStyles.regular14Black.copyWith(
+                                color: AppColors.lightBlue
+                              )
                             ),
                           ],
                         ),
