@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:unischedule/features/home/presentation/views/screens/home_screen.dart';
 import 'package:unischedule/features/main/models/main_tab_model.dart';
 import 'package:unischedule/features/main/presentation/views/widgets/main_tab_screen.dart';
+import 'package:unischedule/features/schedule/presentation/views/screens/schedule_screen.dart';
 
 class MainLayoutScreen extends StatefulWidget {
   const MainLayoutScreen({super.key, this.initialIndex = 0});
@@ -41,6 +42,8 @@ class _MainLayoutScreenState extends State<MainLayoutScreen> {
             for (final tab in mainTabs)
               tab.labelKey == 'main_tab_home'
                   ? const HomeScreen()
+                  : tab.labelKey == 'main_tab_schedule'
+                  ? const ScheduleScreen()
                   : MainTabScreen(model: tab),
           ],
         ),
