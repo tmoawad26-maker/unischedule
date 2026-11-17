@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:unischedule/features/home/presentation/views/widgets/dashboard_sample_data.dart';
+import 'package:unischedule/features/home/models/dashboard_item.dart';
 import 'package:unischedule/features/home/presentation/views/widgets/surface_tile.dart';
 
 class NotificationTile extends StatelessWidget {

@@ -14,7 +14,15 @@ class SmartScheduleNote extends StatelessWidget {
     ),
     child: Row(
       children: [
-        const Icon(Icons.lightbulb_outline, color: AppColors.primary, size: 19),
+        CircleAvatar(
+          backgroundColor: AppColors.lightBulbColor,
+          radius: 20,
+          child: const Icon(
+            Icons.lightbulb_outline,
+            color: AppColors.primary,
+            size: 22,
+          ),
+        ),
         const SizedBox(width: 9),
         Expanded(
           child: Text.rich(

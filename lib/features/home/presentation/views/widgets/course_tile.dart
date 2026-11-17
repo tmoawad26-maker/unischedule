@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:unischedule/core/utils/app_colors.dart';
-import 'package:unischedule/features/home/presentation/views/widgets/dashboard_sample_data.dart';
+import 'package:unischedule/features/home/models/dashboard_item.dart';
 
 class CourseTile extends StatelessWidget {
   const CourseTile({super.key, required this.item});
