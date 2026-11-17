@@ -1,13 +1,18 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:unischedule/core/utils/app_colors.dart';
+import 'package:unischedule/core/utils/app_text_styles.dart';
 
 class ScheduleFilterBar extends StatelessWidget {
   const ScheduleFilterBar({super.key, required this.selectedIndex, required this.onSelected});
   final int selectedIndex;
   final ValueChanged<int> onSelected;
 
-  static const _filters = ['schedule_filter_all', 'schedule_filter_lectures', 'schedule_filter_labs'];
+  static const _filters = [
+    'schedule_filter_all',
+    'schedule_filter_lectures',
+    'schedule_filter_labs',
+  ];
 
   @override
   Widget build(BuildContext context) => SingleChildScrollView(
@@ -21,7 +26,9 @@ class ScheduleFilterBar extends StatelessWidget {
             onSelected: (_) => onSelected(index),
             avatar: index == 0 ? const Icon(Icons.grid_view_rounded, size: 14) : null,
             label: Text(_filters[index].tr()),
-            labelStyle: TextStyle(color: index == selectedIndex ? Colors.white : AppColors.primary, fontSize: 11, fontWeight: FontWeight.w600),
+            labelStyle: AppTextStyles.semiBold11Primary.copyWith(
+              color: index == selectedIndex ? Colors.white : AppColors.primary,
+            ),
             backgroundColor: AppColors.white,
             selectedColor: AppColors.primary,
             side: BorderSide(color: index == selectedIndex ? AppColors.primary : AppColors.surfaceLightBlue),

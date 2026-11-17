@@ -1,6 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:unischedule/core/utils/app_colors.dart';
+import 'package:unischedule/features/schedule/presentation/views/widgets/week_button.dart';
 
 class WeekNavigation extends StatelessWidget {
   const WeekNavigation({super.key, required this.onPrevious, required this.onNext});
@@ -11,10 +13,10 @@ class WeekNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Row(
     children: [
-      _WeekButton(icon: Icons.chevron_left, onPressed: onPrevious),
-      const SizedBox(width: 8),
+      WeekButton(icon: Icons.chevron_left, onPressed: onPrevious),
+       SizedBox(width: 8.w),
       const Icon(Icons.calendar_today_outlined, size: 17, color: AppColors.primary),
-      const SizedBox(width: 6),
+       SizedBox(width: 6.w),
       Expanded(
         child: Text('schedule_week_range'.tr(), style: Theme.of(context).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w700)),
       ),
@@ -26,29 +28,11 @@ class WeekNavigation extends StatelessWidget {
         selected: const {0},
         onSelectionChanged: (_) {},
         showSelectedIcon: false,
-        style: const ButtonStyle(visualDensity: VisualDensity.compact, textStyle: WidgetStatePropertyAll(TextStyle(fontSize: 11))),
+        style:  ButtonStyle(visualDensity: VisualDensity.compact, textStyle: WidgetStatePropertyAll(TextStyle(fontSize: 11.sp))),
       ),
-      const SizedBox(width: 6),
-      _WeekButton(icon: Icons.chevron_right, onPressed: onNext),
+       SizedBox(width: 6.w),
+      WeekButton(icon: Icons.chevron_right, onPressed: onNext),
     ],
   );
 }
 
-class _WeekButton extends StatelessWidget {
-  const _WeekButton({required this.icon, required this.onPressed});
-  final IconData icon;
-  final VoidCallback onPressed;
-
-  @override
-  Widget build(BuildContext context) => SizedBox(
-    width: 30,
-    height: 34,
-    child: IconButton.filledTonal(
-      padding: EdgeInsets.zero,
-      visualDensity: VisualDensity.compact,
-      onPressed: onPressed,
-      icon: Icon(icon, size: 18),
-      style: IconButton.styleFrom(backgroundColor: AppColors.surfaceLightBlue, foregroundColor: AppColors.primary),
-    ),
-  );
-}

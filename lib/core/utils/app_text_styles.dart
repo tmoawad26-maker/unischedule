@@ -14,6 +14,11 @@ class AppTextStyles {
     fontSize: 11.sp,
     fontWeight: FontWeight.w700,
   );
+  static final TextStyle semiBold11Primary = GoogleFonts.plusJakartaSans(
+    color: AppColors.primary,
+    fontSize: 11.sp,
+    fontWeight: FontWeight.w600,
+  );
   static final TextStyle regular12BlackLight = GoogleFonts.plusJakartaSans(
     color: AppColors.lightBlack,
     fontSize: 12.sp,

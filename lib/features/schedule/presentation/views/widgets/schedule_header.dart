@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:unischedule/core/utils/app_colors.dart';
 
 class ScheduleHeader extends StatelessWidget {
@@ -13,7 +14,7 @@ class ScheduleHeader extends StatelessWidget {
         height: 38,
         decoration: BoxDecoration(
           color: AppColors.surfaceLightBlue,
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(12.r),
         ),
         child: const Icon(Icons.calendar_month_rounded, color: AppColors.primary),
       ),
