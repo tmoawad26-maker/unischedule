@@ -1,29 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:unischedule/core/utils/app_colors.dart';
-
-/// Demo dashboard content kept separate so it can later be replaced by app data.
-class DashboardItem {
-  const DashboardItem({
-    required this.title,
-    required this.subtitle,
-    required this.icon,
-    required this.color,
-    this.badge,
-  });
-
-  final String title;
-  final String subtitle;
-  final IconData icon;
-  final Color color;
-  final String? badge;
-}
-
-class DashboardDay {
-  const DashboardDay(this.label, this.number, this.hasClass);
-  final String label;
-  final String number;
-  final bool hasClass;
-}
+import 'package:unischedule/features/home/models/dashboard_day.dart';
+import 'package:unischedule/features/home/models/dashboard_item.dart';
 
 const dashboardWeek = [
   DashboardDay('dash_day_sun', '10', true),

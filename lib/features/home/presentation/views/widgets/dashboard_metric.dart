@@ -1,28 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:unischedule/core/utils/app_colors.dart';
+import 'package:unischedule/features/home/models/dashboard_metric_model.dart';
 
 class DashboardMetric extends StatelessWidget {
-  const DashboardMetric({
-    super.key,
-    required this.label,
-    required this.value,
-    required this.detail,
-    required this.icon,
-    this.valueColor = AppColors.green,
-  });
+  const DashboardMetric({super.key, required this.model});
 
-  final String label;
-  final String value;
-  final String detail;
-  final IconData icon;
-  final Color valueColor;
+  final DashboardMetricModel model;
 
   @override
   Widget build(BuildContext context) => Container(
-    padding: const EdgeInsets.all(9),
+    padding: EdgeInsets.all(9.h),
     decoration: BoxDecoration(
       color: AppColors.white,
-      borderRadius: BorderRadius.circular(13),
+      borderRadius: BorderRadius.circular(13.r),
     ),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,32 +22,32 @@ class DashboardMetric extends StatelessWidget {
           children: [
             Expanded(
               child: Text(
-                label,
+                model.label,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: Theme.of(context).textTheme.bodySmall,
               ),
             ),
-            Icon(icon, size: 15, color: valueColor),
+            Icon(model.icon, size: 15, color: model.valueColor),
           ],
         ),
-        const SizedBox(height: 5),
+        SizedBox(height: 5.h),
         FittedBox(
           fit: BoxFit.scaleDown,
           alignment: AlignmentDirectional.centerStart,
           child: Text(
-            value,
+            model.percentageValue,
             style: Theme.of(context).textTheme.titleMedium
-                ?.copyWith(color: valueColor),
+                ?.copyWith(color: model.valueColor),
           ),
         ),
         const SizedBox(height: 3),
         Text(
-          detail,
+          model.detail,
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
           style: Theme.of(context).textTheme.bodySmall
-              ?.copyWith(color: valueColor),
+              ?.copyWith(color: model.valueColor),
         ),
       ],
     ),

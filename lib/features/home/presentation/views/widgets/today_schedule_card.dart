@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:unischedule/core/utils/app_colors.dart';
 import 'package:unischedule/features/home/presentation/views/widgets/status_pill.dart';
+import 'package:unischedule/features/home/presentation/views/widgets/up_coming_class.dart';
 
 class TodayScheduleCard extends StatelessWidget {
   const TodayScheduleCard({super.key});
@@ -30,7 +31,7 @@ class TodayScheduleCard extends StatelessWidget {
               ),
               StatusPill(
                 label: 'dash_next_class'.tr(),
-                color: AppColors.lightGreen,
+                color: AppColors.white,
               ),
             ],
           ),
@@ -81,58 +82,22 @@ class TodayScheduleCard extends StatelessWidget {
           const SizedBox(height: 14),
           Divider(color: AppColors.white.withValues(alpha: .2), height: 1),
           const SizedBox(height: 10),
-          _upcomingClass(
-            context,
+          UpComingClass(
             time: '12:30 PM',
             title: 'dash_next_class_database'.tr(),
             room: 'dash_room_database'.tr(),
+            themeData: theme,
           ),
           const SizedBox(height: 8),
-          _upcomingClass(
-            context,
+          UpComingClass(
             time: '2:00 PM',
             title: 'dash_next_class_ai'.tr(),
             room: 'dash_room_ai'.tr(),
+            themeData: theme,
           ),
         ],
       ),
     );
   }
-
-  Widget _upcomingClass(
-    BuildContext context, {
-    required String time,
-    required String title,
-    required String room,
-  }) => Row(
-    children: [
-      SizedBox(
-        width: 66,
-        child: Text(
-          time,
-          style: Theme.of(context).textTheme.labelSmall
-              ?.copyWith(color: AppColors.lightGreen),
-        ),
-      ),
-      Expanded(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              title,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: Theme.of(context).textTheme.labelSmall
-                  ?.copyWith(color: AppColors.white),
-            ),
-            Text(
-              room,
-              style: Theme.of(context).textTheme.bodySmall
-                  ?.copyWith(color: AppColors.white.withValues(alpha: .7)),
-            ),
-          ],
-        ),
-      ),
-    ],
-  );
 }
+

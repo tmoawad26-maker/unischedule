@@ -24,4 +24,6 @@ class AppColors {
   static const brandingColor = Color(0xffA8C8F8);
   static const scheduleColor = Color(0xff002548);
   static const scheduleLightGreen = Color(0xffE4FAF7);
+  static  const warningColor = Color(0xffFFB800);
+  static const lightBulbColor = Color(0xffD9E3FB);
 }
