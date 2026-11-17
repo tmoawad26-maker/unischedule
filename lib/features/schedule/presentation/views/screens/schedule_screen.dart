@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:unischedule/features/schedule/presentation/views/widgets/schedule_day_picker.dart';
 import 'package:unischedule/features/schedule/presentation/views/widgets/schedule_filter_bar.dart';
 import 'package:unischedule/features/schedule/presentation/views/widgets/schedule_header.dart';
+import 'package:unischedule/features/schedule/presentation/views/widgets/conflict_summary.dart';
 import 'package:unischedule/features/schedule/presentation/views/widgets/schedule_timeline.dart';
 import 'package:unischedule/features/schedule/presentation/views/widgets/smart_timetable_notice.dart';
 import 'package:unischedule/features/schedule/presentation/views/widgets/week_navigation.dart';
@@ -24,23 +26,23 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
         padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
         children: [
           const ScheduleHeader(),
-          const SizedBox(height: 18),
+           SizedBox(height: 18.h),
           WeekNavigation(onPrevious: () {}, onNext: () {}),
-          const SizedBox(height: 10),
+           SizedBox(height: 10.h),
           ScheduleDayPicker(
             selectedIndex: _selectedDay,
             onSelected: (index) => setState(() => _selectedDay = index),
           ),
-          const SizedBox(height: 14),
+           SizedBox(height: 14.h),
           ScheduleFilterBar(
             selectedIndex: _selectedFilter,
             onSelected: (index) => setState(() => _selectedFilter = index),
           ),
-          const SizedBox(height: 14),
+           SizedBox(height: 14.h),
           const SmartTimetableNotice(),
-          const SizedBox(height: 12),
+           SizedBox(height: 12.h),
           ScheduleTimeline(filterIndex: _selectedFilter),
-          const SizedBox(height: 12),
+           SizedBox(height: 12.h),
           const ConflictSummary(),
         ],
       ),

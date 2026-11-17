@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:unischedule/core/utils/app_colors.dart';
 
 class SmartScheduleNote extends StatelessWidget {
@@ -10,7 +11,7 @@ class SmartScheduleNote extends StatelessWidget {
     padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 11),
     decoration: BoxDecoration(
       color: AppColors.surfaceLightBlue,
-      borderRadius: BorderRadius.circular(14),
+      borderRadius: BorderRadius.circular(14.r),
     ),
     child: Row(
       children: [
